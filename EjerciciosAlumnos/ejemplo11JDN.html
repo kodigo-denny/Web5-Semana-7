@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 11</title>
+    <script>
+        /*
+Un obrero necesita calcular su salario semanal, el cual se obtiene
+ de la siguiente manera: Si trabaja 40 horas o menos se le paga $4 
+ por hora. Si trabaja más de 40 horas se le paga $4 por cada una de 
+ las primeras 40 horas y $6 por cada hora extra.
+*/
+        var horas = Number(prompt("Horas trabajadas: "));
+        var salario;
+        
+        if (horas < 0) {
+            alert("El valor es incorrecto ");
+        } else if (horas <= 40) {
+            salario = horas * 4; 
+        } 
+        else {
+            var horasExtra = horas - 40;
+            salario = (horasExtra*6) + (40*4);
+        }
+        alert("Su salario es: " + salario)
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>
